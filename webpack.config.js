@@ -9,7 +9,10 @@ module.exports = (env) => {
       mode: prod ? "production" : "development",
       entry: "./index.tsx",
       output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "build"),
+        publicPath: '/',
+        hashFunction: 'xxhash64',
+        filename: 'bundle.js'
       },
       module: {
         rules: [
