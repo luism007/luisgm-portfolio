@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My portfolio site",
   "main": "index.js",
-  "homepage": "https://luism007.github.io/",
+  "homepage": "https://luism007.github.io/luisgm-portfolio/",
   "scripts": {
     "start": "webpack serve --port 3000",
     "build": "webpack --config webpack.config.js --mode production",
