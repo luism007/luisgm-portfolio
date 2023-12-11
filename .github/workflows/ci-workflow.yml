@@ -9,6 +9,8 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@master 
+            - name: Setup Identity
+              run: git config user.email ${{secrets.USER_EMAIL}} && git config user.name ${{secrets.USER_NAME}}
             - name: Install Dependencies
               run: npm install
             - name: Run Pre-deploy script
