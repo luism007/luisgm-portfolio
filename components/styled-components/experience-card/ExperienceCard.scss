@@ -1,0 +1,7 @@
+@import '../../../scss/mixins';
+
+.container-experience-card { 
+    @include mobile{
+        width: 100vw;
+    }
+}

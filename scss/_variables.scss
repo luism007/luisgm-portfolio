@@ -1,5 +1,8 @@
 $border-color: #3333;
 $primary-color: #fff;
+$primary-dark: #1f1f1f;
+$dark-text: #333;
+$light-text: #fff;
 $text-color: #000;
 $font-weights: (
     "light": 300,
@@ -9,3 +12,8 @@ $font-weights: (
 );
 
 $mobile-max-width: 800px;
+$font-family: owners, sans-serif;
+$default-font-size: 1em;
+$heading-font-size: 1.875em;
+$subheading-font-size: 1.25em;
+$section-heading-font-size: 3.125em;

@@ -1,0 +1,9 @@
+.container-horizontal-scroll-stepper { 
+}
+
+.container-horizontal-scroll-stepper-items { 
+    display: flex;
+    flex-flow: row;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
