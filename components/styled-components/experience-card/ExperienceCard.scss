@@ -9,11 +9,14 @@
 }
 .container-experience-card { 
 
+    width: 75vw;
+    padding: 3em;
     h2 { 
         margin: 0 0 1em 0.8em;
     }
     @include mobile{
         width: 100vw;
+        padding: 0;
     }
 }
 

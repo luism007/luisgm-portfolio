@@ -13,12 +13,47 @@
     overflow: hidden;
 }
 
+.section-header { 
+    margin-left: 1.3em;
+    @include mobile { 
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+
 h1 { 
-    font-size: $section-heading-font-size;
+    font-size: 3.125em;
+    text-transform: uppercase;
+    @include mobile { 
+        font-size: $section-heading-font-size;
+    }
 }
 h2 { 
-    font-size: $subheading-font-size;
+    font-size: 1.875em;
+    @include mobile { 
+        font-size: $subheading-font-size;
+    }
+}
+
+h3 { 
+    font-size: 1.35em;
+    @include mobile { 
+        font-size: $subheading-font-size;
+    }
 }
 p { 
-    font-size: $subheading-font-size;
+    font-size: 1.85em;
+    letter-spacing: 0.09em;
+    @include mobile { 
+        font-size: $subheading-font-size;
+        letter-spacing: 0;
+    }
+}
+
+button { 
+    font-size: 1.15em;
+    @include mobile { 
+        font-size: 1em;
+    }
 }

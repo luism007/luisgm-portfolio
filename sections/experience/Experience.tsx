@@ -7,7 +7,7 @@ export const Experience = () => {
     const expCards = experience.map((exp) => <ExperienceCard experience={exp}/>);
     return(
         <div className="section-container" id = "experience">
-            <h1> Experience </h1>
+            <h1 className="section-header"> Experience </h1>
             <HorizontalScrollList items={expCards}/>
         </div>
     )
