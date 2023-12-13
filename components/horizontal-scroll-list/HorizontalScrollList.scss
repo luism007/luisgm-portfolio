@@ -1,4 +1,6 @@
 .container-horizontal-scroll-stepper { 
+    display: flex;
+    height: 90%;
 }
 
 .container-horizontal-scroll-stepper-items { 
@@ -6,4 +8,21 @@
     flex-flow: row;
     overflow-y: hidden;
     overflow-x: auto;
+    align-items: center;
+}
+
+span[class^=horizontal-list-] { 
+    // padding: 0 1em;
+}
+
+.horizontal-scroll-arrow{
+    position: absolute;
+    z-index: 2;
+}
+
+.horizontal-scroll-arrow.left { 
+    left: 0
+}
+.horizontal-scroll-arrow.right { 
+    right: 0
 }

@@ -4,3 +4,8 @@
         @content  
     }
 }
+
+@mixin flexFlow($direction) { 
+    display: flex;
+    flex-direction: $direction;
+}

@@ -1,7 +1,40 @@
 @import '../../../scss/mixins';
+@import '../../../scss/functions';
 
+
+.subheading-experience-card { 
+    display: flex;
+    flex-flow: row;
+    justify-content: start;
+}
 .container-experience-card { 
+
+    h2 { 
+        margin: 0 0 1em 0.8em;
+    }
     @include mobile{
         width: 100vw;
     }
+}
+
+.tenure-experience-card, p { 
+    font-weight: weight(light);
+}
+
+.position-experience-card, 
+.tenure-experience-card { 
+    margin-bottom: 1em;
+}
+
+.position-experience-card { 
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+.tenure-experience-card { 
+    margin-left: 1em;
+}
+
+.description-experience-card { 
+    margin: 0 1em 1em 1em;
 }

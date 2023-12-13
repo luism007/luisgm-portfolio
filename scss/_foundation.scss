@@ -1,0 +1,24 @@
+@import './mixins';
+@import './variables';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    font-size: $default-font-size;
+}
+.section-container { 
+    height: 100vh;
+    padding-top: 10vh;
+    overflow: hidden;
+}
+
+h1 { 
+    font-size: $section-heading-font-size;
+}
+h2 { 
+    font-size: $subheading-font-size;
+}
+p { 
+    font-size: $subheading-font-size;
+}

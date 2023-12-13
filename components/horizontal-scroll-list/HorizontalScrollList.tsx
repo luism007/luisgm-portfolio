@@ -4,32 +4,35 @@ export const HorizontalScrollList: React.FC<{items: React.JSX.Element[]}> = (pro
     const [index, setIndex] = useState(0);
 
     const scrollTo = () => {
+        console.log('Scroll To', index);
         const item = document.getElementById(`horizontal-list-${index}`);
-        item?.scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});
+        console.log('Item', item);
+        item?.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'start'});
     }
 
     const clickLeft = () => {setIndex(index - 1);};
     const clickRight = () => { setIndex(index + 1);}
     
     useEffect(() => {
+        console.log('Index', index);
         scrollTo();
     }, [index]);
 
     return(
         <div className = 'container-horizontal-scroll-stepper'>
-            {index > 0 && <span onClick={clickLeft}> Left Arrow </span>}
+            {index > 0 && <span onClick={clickLeft} className="horizontal-scroll-arrow left"> Left Arrow </span>}
             <div className='container-horizontal-scroll-stepper-items'>
                 {
                     props.items.map((item, index) => {
                         return (
-                            <span key={index} id = {`horizontal-list-${index}`}>
+                            <span key={index} id = {`horizontal-list-${index}`} className = {`horizontal-list-${index}`}>
                                 {item}
                             </span>
                         )
                     })
                 }
             </div>
-            {index < props.items.length - 1 && <span onClick={clickRight}> Right Arrow </span>}
+            {index < props.items.length - 1 && <span onClick={clickRight} className="horizontal-scroll-arrow right"> Right Arrow </span>}
         </div>
     );
 }
