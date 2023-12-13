@@ -4,16 +4,23 @@ on:
         branches:
             - main
 jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@master
+        - name: Install Dependencies
+          run: npm install
+        - name: Run Pre-deploy script
+          run: npm run predeploy
+  
     deploy:
+        permissions:
+          pages: write
+          id-token: write
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout
-              uses: actions/checkout@master
             - name: Setup Identity
               run: git config user.email "luisgm.w001@gmail.com" && git config user.name "luism007"
-            - name: Install Dependencies
-              run: npm install
-            - name: Run Pre-deploy script
-              run: npm run predeploy
             - name: Run Deploy Script
-              run: npm run deploy
+              uses: actions/deploy-pages@v3
