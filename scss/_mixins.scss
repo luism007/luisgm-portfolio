@@ -1,0 +1,11 @@
+@import './variables';
+@mixin mobile { 
+    @media (max-width: $mobile-max-width) { 
+        @content  
+    }
+}
+
+@mixin flexFlow($direction) { 
+    display: flex;
+    flex-direction: $direction;
+}
