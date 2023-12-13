@@ -20,7 +20,7 @@ export const HorizontalScrollList: React.FC<{items: React.JSX.Element[]}> = (pro
 
     return(
         <div className = 'container-horizontal-scroll-stepper'>
-            {index > 0 && <span onClick={clickLeft} className="horizontal-scroll-arrow left"> Left Arrow </span>}
+            {index > 0 && <button onClick={clickLeft} className="horizontal-scroll-arrow left"> Left Arrow </button>}
             <div className='container-horizontal-scroll-stepper-items'>
                 {
                     props.items.map((item, index) => {
@@ -32,7 +32,7 @@ export const HorizontalScrollList: React.FC<{items: React.JSX.Element[]}> = (pro
                     })
                 }
             </div>
-            {index < props.items.length - 1 && <span onClick={clickRight} className="horizontal-scroll-arrow right"> Right Arrow </span>}
+            {index < props.items.length - 1 && <button onClick={clickRight} className="horizontal-scroll-arrow right"> Right Arrow </button>}
         </div>
     );
 }

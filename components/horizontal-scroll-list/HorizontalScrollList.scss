@@ -1,6 +1,9 @@
+@import '../../scss/variables';
+
 .container-horizontal-scroll-stepper { 
     display: flex;
     height: 90%;
+    position: relative;
 }
 
 .container-horizontal-scroll-stepper-items { 
@@ -18,6 +21,11 @@ span[class^=horizontal-list-] {
 .horizontal-scroll-arrow{
     position: absolute;
     z-index: 2;
+    background-color: transparent;
+    backdrop-filter: saturate(87%) blur(2px);
+    border: none;
+    color: $light-text;
+    bottom: 2em;
 }
 
 .horizontal-scroll-arrow.left { 

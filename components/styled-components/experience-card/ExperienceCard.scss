@@ -38,3 +38,15 @@
 .description-experience-card { 
     margin: 0 1em 1em 1em;
 }
+
+.container-button-experience-card { 
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.portfolio-button { 
+    padding: 0.5em 1em;
+    color: $primary-light;
+    background-color: $primary-dark;
+    border: 1px solid $primary-light;
+}
