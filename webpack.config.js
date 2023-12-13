@@ -40,17 +40,9 @@ module.exports = (env) => {
             ],
           },
           {
-            test: /\.(woff|woff2|eot|ttf|svg)$/,
-            use: {
-              loader: "url-loader",
-            },
-          },
-          {
             test: /\.(woff|woff2|eot|ttf|svg|jpg|png)$/,
-            use: {
-              loader: "url-loader",
-            },
-          },
+            type: "asset/resource"
+          }
         ],
       },
       devtool: prod ? undefined : "source-map",

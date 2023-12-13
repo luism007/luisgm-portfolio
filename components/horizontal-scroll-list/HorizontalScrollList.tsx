@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
+import leftIcon from "../../assets/left-arrow.svg";
+import rightIcon from "../../assets/right-arrow.svg";
 import './HorizontalScrollList.scss';
 export const HorizontalScrollList: React.FC<{items: React.JSX.Element[]}> = (props) => {
     const [index, setIndex] = useState(0);
 
     const scrollTo = () => {
-        console.log('Scroll To', index);
         const item = document.getElementById(`horizontal-list-${index}`);
-        console.log('Item', item);
         item?.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'start'});
     }
 
@@ -14,13 +14,12 @@ export const HorizontalScrollList: React.FC<{items: React.JSX.Element[]}> = (pro
     const clickRight = () => { setIndex(index + 1);}
     
     useEffect(() => {
-        console.log('Index', index);
         scrollTo();
     }, [index]);
 
     return(
         <div className = 'container-horizontal-scroll-stepper'>
-            {index > 0 && <button onClick={clickLeft} className="horizontal-scroll-arrow left"> Left Arrow </button>}
+            {index > 0 && <img src = {leftIcon} onClick={clickLeft} className="horizontal-scroll-arrow left"></img>}
             <div className='container-horizontal-scroll-stepper-items'>
                 {
                     props.items.map((item, index) => {
@@ -32,7 +31,7 @@ export const HorizontalScrollList: React.FC<{items: React.JSX.Element[]}> = (pro
                     })
                 }
             </div>
-            {index < props.items.length - 1 && <button onClick={clickRight} className="horizontal-scroll-arrow right"> Right Arrow </button>}
+            {index < props.items.length - 1 && <img src = {rightIcon} onClick={clickRight} className="horizontal-scroll-arrow right"></img>}
         </div>
     );
 }
