@@ -21,4 +21,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Run Deploy Script
-              uses: actions/deploy-pages@v3
+              run: | 
+                git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+                npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+              env:
+                GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
