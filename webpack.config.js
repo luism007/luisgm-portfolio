@@ -10,7 +10,7 @@ module.exports = (env) => {
       entry: "./index.tsx",
       output: {
         path: path.resolve(__dirname, "build"),
-        publicPath: '/luisgm-portfolio',
+        publicPath: '/luisgm-portfolio/',
         hashFunction: 'xxhash64',
         filename: 'bundle.js'
       },
