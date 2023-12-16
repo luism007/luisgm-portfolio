@@ -21,7 +21,11 @@
     }
 }
 
-
+nav { 
+    position: fixed;
+    transform-style: preserve-3d;
+   
+}
 h1 { 
     font-size: 3.125em;
     text-transform: uppercase;
