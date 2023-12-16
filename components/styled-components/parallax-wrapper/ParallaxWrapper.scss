@@ -1,0 +1,6 @@
+@import '../../../scss/variables';
+.parallax-wrapper { 
+    perspective: $parallax-perspective;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
