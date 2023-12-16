@@ -3,17 +3,26 @@ on:
     push:
         branches:
             - main
-jobs:
+    pull_request:
+        branches:
+            - main
+jobs:  
     deploy:
+        permissions:
+          pages: write
+          contents: write
+          id-token: write
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
               uses: actions/checkout@master
-            - name: Setup Identity
-              run: git config user.email "luisgm.w001@gmail.com" && git config user.name "luism007"
             - name: Install Dependencies
               run: npm install
             - name: Run Pre-deploy script
               run: npm run predeploy
             - name: Run Deploy Script
-              run: npm run deploy
+              run: | 
+                git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+                npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+              env:
+                GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
