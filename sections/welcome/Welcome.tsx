@@ -5,10 +5,8 @@ import LuisTitle from '../../assets/luisgm-title.svg';
 export const Welcome = () => {
     return(
         <div className="section-container welcome" id = "welcome">
-            <div className="welcome-top-section">
                 <img src={LuisHeadshot} className="parallax-background" />
                 <img src={LuisTitle} className="parallax-foreground" />
-            </div>
             <div className="welcome-bottom-section">
                 <h1 className="section-header">
                     Welcome

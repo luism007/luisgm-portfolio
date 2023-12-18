@@ -2,11 +2,15 @@
 @import '../../scss/functions';
 
 .section-container.welcome { 
+    display: flex;
     padding-top: 0;
     background-color: $primary-light;
     color: $dark-text;
     text-align: center;
     transform-style: preserve-3d;
+    overflow: visible;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .welcome-top-section { 
@@ -20,9 +24,9 @@
     align-items: center;
 }
 .welcome-bottom-section { 
-    height: 50%;
     position: relative;
     background-color: $primary-light;
+    transform: translateZ(3px) scale(0.5);
 }
 
 .parallax-background,
@@ -36,11 +40,11 @@
     object-fit: contain;
 }
 .parallax-background { 
-    transform: translateZ(-1px) scale(parallaxScaleValue($parallax-perspective, -1));
+    transform: translateZ(0px) scale(1);
     background-color: black;
 }
 .parallax-foreground { 
-    transform: translateZ(0px) scale(parallaxScaleValue($parallax-perspective, 0));
+    transform: translateZ(4px) scale(0.5);
     background: none;
     object-fit: none;
 }
