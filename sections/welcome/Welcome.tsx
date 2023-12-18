@@ -1,13 +1,9 @@
 import React from "react";
 import './Welcome.scss';
-import LuisHeadshot from '../../assets/luis-headshot.svg';
-import LuisTitle from '../../assets/luisgm-title.svg';
 export const Welcome = () => {
     return(
         <div className="section-container welcome" id = "welcome">
-                <img src={LuisHeadshot} className="parallax-background" />
-                <img src={LuisTitle} className="parallax-foreground" />
-            <div className="welcome-bottom-section">
+            <div> 
                 <h1 className="section-header">
                     Welcome
                 </h1>

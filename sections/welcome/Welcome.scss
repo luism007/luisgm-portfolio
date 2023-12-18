@@ -1,8 +1,10 @@
 @import '../../scss/variables';
 @import '../../scss/functions';
+@import '../../scss/mixins';
 
 .section-container.welcome { 
     display: flex;
+    flex-flow: column;
     padding-top: 0;
     background-color: $primary-light;
     color: $dark-text;
@@ -10,41 +12,11 @@
     transform-style: preserve-3d;
     overflow: visible;
     justify-content: center;
-    align-items: flex-end;
-}
-
-.welcome-top-section { 
-    height: 50%;
-    position: relative;
-    z-index: -1;
-    transform-style: preserve-3d;
-    background: none;
-    display: flex;
-    justify-content: center;
     align-items: center;
 }
-.welcome-bottom-section { 
-    position: relative;
-    background-color: $primary-light;
-    transform: translateZ(3px) scale(0.5);
+
+.section-container.welcome div { 
+    transform: translateZ(4px) scale(0.6);
+    padding: 2em;
 }
 
-.parallax-background,
-.parallax-foreground
-{ 
-    padding-top: 0;
-    position: absolute;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-.parallax-background { 
-    transform: translateZ(0px) scale(1);
-    background-color: black;
-}
-.parallax-foreground { 
-    transform: translateZ(4px) scale(0.5);
-    background: none;
-    object-fit: none;
-}
