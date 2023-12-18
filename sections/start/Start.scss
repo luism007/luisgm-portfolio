@@ -1,0 +1,38 @@
+@import '../../scss/variables';
+@import '../../scss/functions';
+@import '../../scss/mixins';
+
+.section-container.start { 
+    display: flex;
+    padding-top: 0;
+    background-color: $primary-light;
+    color: $dark-text;
+    text-align: center;
+    transform-style: preserve-3d;
+    overflow: visible;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.parallax-background,
+.parallax-foreground
+{ 
+    padding-top: 0;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.parallax-background { 
+    transform: translateZ(0px) scale(1);
+    background-color: black;
+}
+.parallax-foreground { 
+    transform: translateZ(2px) scale(1);
+    width: 70vw;
+    height: 20vh;
+    top: 55vh;
+    background: none;
+    object-fit: none;
+}
