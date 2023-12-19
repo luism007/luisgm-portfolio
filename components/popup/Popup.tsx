@@ -16,8 +16,8 @@ export const Popup: React.FC<{children: React.JSX.Element , animateClass: string
             <div className= {`popup-slide-section ${props.animateClass}`}>
                 <img src={CloseIcon} className="popup-close-icon" onClick={props.callback}></img>
                 <div className="popup-header-section">
-                    <h2> {props.title} </h2>
-                    <h3> {props.subtitle} </h3>
+                    <h2 className="popup-title"> {props.title} </h2>
+                    <h3 className="popup-subtitle"> {props.subtitle} </h3>
                 </div>
                 <div className="popup-element-section">
                     {props.children}

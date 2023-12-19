@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Experience } from "../../../constants/types/ExperienceType";
 import './ExperienceCard.scss';
 import { Popup } from "../../popup/Popup";
+import { List } from "../../list/List";
 export const ExperienceCard: React.FC<{experience: Experience}> = (props) => {
     
     const [popup, setPopup] = useState('hide');
@@ -23,7 +24,7 @@ export const ExperienceCard: React.FC<{experience: Experience}> = (props) => {
                 <button className="portfolio-button" onClick={togglePopup}> View Skills </button>
             </div>
             <Popup animateClass = {popup} title = {props.experience.company} subtitle="skills" callback={togglePopup}>
-                    {<div> {props.experience.description}</div>}
+                    <List items={props.experience.skills}/>
             </Popup>
         </div>
     )

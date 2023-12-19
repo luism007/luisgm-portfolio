@@ -1,4 +1,5 @@
 @import '../../scss/variables';
+@import '../../scss/mixins';
 
 .popup-container { 
     position: absolute;
@@ -14,7 +15,7 @@
     height: 50vh;
     width: 100vw;
     border-radius: 25px 25px 0px 0px;
-    padding: 0em 1em;
+    padding: 0em 1.8em;
     overflow-y: auto;
 }
 
@@ -25,7 +26,21 @@
     align-items: baseline;
     text-transform: capitalize;
     margin-top: 1em;
+    border-bottom: 1px solid $primary-dark;
 }
+
+.popup-title,
+.popup-subtitle {
+    @include mobile { 
+        font-size: $heading-font-size;
+    }
+}
+
+.popup-subtitle { 
+    margin-bottom: 0.5em;
+}
+
+
 
 .popup-close-icon {
     position: absolute;
