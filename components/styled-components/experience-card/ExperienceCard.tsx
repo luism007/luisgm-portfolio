@@ -4,12 +4,12 @@ import './ExperienceCard.scss';
 import { Popup } from "../../popup/Popup";
 export const ExperienceCard: React.FC<{experience: Experience}> = (props) => {
     
-    const [popup, setPopup] = useState(false);
+    const [popup, setPopup] = useState('hide');
     
     useEffect(() => {}, [popup]);
     
     const togglePopup = () => {
-        setPopup(!popup);
+        setPopup((popup === 'show') ? 'hide' : 'show');
     }
     
     return(
@@ -22,11 +22,9 @@ export const ExperienceCard: React.FC<{experience: Experience}> = (props) => {
             <div className="container-button-experience-card">
                 <button className="portfolio-button" onClick={togglePopup}> View Skills </button>
             </div>
-            {popup && 
-            <Popup title = {props.experience.company} subtitle="skills" callback={togglePopup}>
+            <Popup animateClass = {popup} title = {props.experience.company} subtitle="skills" callback={togglePopup}>
                     {<div> {props.experience.description}</div>}
             </Popup>
-            }
         </div>
     )
 }
