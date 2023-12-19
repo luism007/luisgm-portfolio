@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Experience } from "../../../constants/types/ExperienceType";
 import './ExperienceCard.scss';
+import { Popup } from "../../popup/Popup";
 export const ExperienceCard: React.FC<{experience: Experience}> = (props) => {
+    
+    const [popup, setPopup] = useState(false);
+    
+    useEffect(() => {}, [popup]);
+    
+    const togglePopup = () => {
+        setPopup(!popup);
+    }
+    
     return(
         <div className = 'container-experience-card' key = {props.experience.id}>
             <h2 className="heading-experience-card"> {props.experience.company}</h2>
@@ -10,8 +20,13 @@ export const ExperienceCard: React.FC<{experience: Experience}> = (props) => {
             </div>
             <p className="description-experience-card"> {props.experience.description}</p>
             <div className="container-button-experience-card">
-                <button className="portfolio-button"> View Skills </button>
+                <button className="portfolio-button" onClick={togglePopup}> View Skills </button>
             </div>
+            {popup && 
+            <Popup title = {props.experience.company} subtitle="skills" callback={togglePopup}>
+                    {<div> {props.experience.description}</div>}
+            </Popup>
+            }
         </div>
     )
 }

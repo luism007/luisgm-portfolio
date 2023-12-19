@@ -1,0 +1,42 @@
+@import '../../scss/variables';
+
+.popup-container { 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.popup-slide-section { 
+    background-color: $primary-light;
+    color: $primary-dark;
+    position: absolute;
+    bottom: 0;
+    height: 50vh;
+    width: 100vw;
+    border-radius: 25px 25px 0px 0px;
+    padding: 1em;
+    overflow-y: auto;
+}
+
+.popup-header-section { 
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: baseline;
+    text-transform: capitalize;
+    margin-top: 1em;
+}
+
+.popup-close-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1em;
+}
+
+.popup-element-section { 
+    margin: 1em;
+}
