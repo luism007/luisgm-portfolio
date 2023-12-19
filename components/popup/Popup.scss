@@ -1,0 +1,124 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.popup-container { 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.popup-slide-section { 
+    background-color: $primary-light;
+    color: $primary-dark;
+    position: absolute;
+    bottom: 0;
+    height: 50vh;
+    width: 100vw;
+    border-radius: 25px 25px 0px 0px;
+    padding: 0em 1.8em;
+    overflow-y: auto;
+}
+
+.popup-header-section { 
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: baseline;
+    text-transform: capitalize;
+    margin-top: 1em;
+    border-bottom: 1px solid $primary-dark;
+}
+
+.popup-title,
+.popup-subtitle {
+    @include mobile { 
+        font-size: $heading-font-size;
+    }
+}
+
+.popup-subtitle { 
+    margin-bottom: 0.5em;
+}
+
+
+
+.popup-close-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1em;
+}
+
+.popup-element-section { 
+    margin: 1em;
+}
+
+
+.popup-container.hide {
+    height: 0vh;
+    width: 0vw;
+    background: none;
+    animation-name: hideBackground;
+    animation-duration: 0.1s;
+    animation-timing-function: ease-in;
+}
+
+.popup-slide-section.hide {
+    height: 0vh;
+    animation-name: slideDown;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in
+} 
+
+
+.popup-container.show { 
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.8);
+    animation-name: showBackground;
+    animation-duration: 0.1s;
+    animation-timing-function: ease-in;
+}
+
+.popup-slide-section.show {
+    height: 50vh;
+    animation-name: slideUp;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes slideUp{
+    from {
+        height: 0;
+    }
+    to {
+        height: 50vh;
+    }
+}
+
+@keyframes slideDown { 
+    from {
+        height: 50vh;
+    }
+    to {
+        height: 0vh;
+    }
+}
+
+@keyframes showBackground { 
+    from {
+        background: none;
+    }
+    to {
+        background-color: rgba(0,0,0,0.8);
+    }
+}
+
+@keyframes hideBackground { 
+    from {
+        background-color: rgba(0,0,0,0.8);
+    }
+    to {
+        background: none;
+    }
+}

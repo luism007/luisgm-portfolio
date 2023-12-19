@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Experience } from "../../../constants/types/ExperienceType";
 import './ExperienceCard.scss';
+import { Popup } from "../../popup/Popup";
+import { List } from "../../list/List";
 export const ExperienceCard: React.FC<{experience: Experience}> = (props) => {
+    
+    const [popup, setPopup] = useState('hide');
+    
+    useEffect(() => {}, [popup]);
+    
+    const togglePopup = () => {
+        setPopup((popup === 'show') ? 'hide' : 'show');
+    }
+    
     return(
         <div className = 'container-experience-card' key = {props.experience.id}>
             <h2 className="heading-experience-card"> {props.experience.company}</h2>
@@ -10,8 +21,11 @@ export const ExperienceCard: React.FC<{experience: Experience}> = (props) => {
             </div>
             <p className="description-experience-card"> {props.experience.description}</p>
             <div className="container-button-experience-card">
-                <button className="portfolio-button"> View Skills </button>
+                <button className="portfolio-button" onClick={togglePopup}> View Skills </button>
             </div>
+            <Popup animateClass = {popup} title = {props.experience.company} subtitle="skills" callback={togglePopup}>
+                    <List items={props.experience.skills}/>
+            </Popup>
         </div>
     )
 }

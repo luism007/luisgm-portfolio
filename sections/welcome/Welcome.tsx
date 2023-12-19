@@ -1,6 +1,11 @@
 import React from "react";
 import './Welcome.scss';
+import { useScrollTo } from "../../hooks/useScrollTo";
+import DownArrowDark from '../../assets/down-arrow-dark.svg';
+import { JumpSectionButton } from "../../components/styled-components/jump-to-section-button/JumpSectionButton";
+import { ETheme } from "../../constants/enums/ETheme";
 export const Welcome = () => {
+    const {scrollTo} = useScrollTo('experience', 'smooth', 'start', 'start');
     return(
         <div className="section-container welcome" id = "welcome">
             <div> 
@@ -13,6 +18,7 @@ export const Welcome = () => {
                     With 3+ years of industry experience I've worked in teams of leaders within their respective
                     industries: Telecommunications, Vehicle Manufacturing, & Telemedicine. Please scroll down to explore more.
                 </p>
+                <JumpSectionButton callback={scrollTo} title='Experience' icon={DownArrowDark} theme = {ETheme.DARK} ></JumpSectionButton>
             </div>
         </div>
     )

@@ -1,0 +1,35 @@
+@import '../../../scss/variables';
+
+.jump-to-section-button-container,
+.jump-to-section-button-container h3,
+.jump-to-section-button-container img
+{ 
+    all: unset;
+}
+
+.jump-to-section-button-container{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.jump-to-section-button-container img { 
+    height: 4em;
+}
+
+.jump-to-section-button-container h3 { 
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.jump-to-section-button-container:hover { 
+    cursor: pointer;
+}
+
+.light { 
+    color: $light-text !important;
+}
+
+.dark { 
+    color: $dark-text !important;
+}
