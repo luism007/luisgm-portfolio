@@ -22,6 +22,10 @@
     margin-bottom: 0.5em;
 }
 
+.jump-to-section-button-container:hover { 
+    cursor: pointer;
+}
+
 .light { 
     color: $light-text !important;
 }
