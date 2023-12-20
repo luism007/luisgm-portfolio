@@ -6,7 +6,7 @@ import './Experience.scss';
 export const Experience = () => {
     const expCards = experience.map((exp) => <ExperienceCard experience={exp}/>);
     return(
-        <div className="section-container" id = "experience">
+        <div className="section-container experience" id = "experience">
             <h1 className="section-header"> Experience </h1>
             <HorizontalScrollList items={expCards}/>
         </div>

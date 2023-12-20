@@ -12,9 +12,16 @@ $font-weights: (
 );
 
 $mobile-max-width: 800px;
-$font-family: owners, sans-serif;
+$small-mobile-max-width: 380px;
+$font-family: owners, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 $default-font-size: 1em;
 $heading-font-size: 1.875em;
 $subheading-font-size: 1.25em;
 $section-heading-font-size: 3.125em;
+$section-heading-font-size-small: 2.5em;
+$section-subheading-font-size-small: 1.1em;
+$section-paragraph-font-size-small: 1.1em;
 $parallax-perspective: 10px;

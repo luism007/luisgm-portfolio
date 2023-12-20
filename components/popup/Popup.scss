@@ -34,6 +34,10 @@
     @include mobile { 
         font-size: $heading-font-size;
     }
+
+    @include small-mobile { 
+        font-size: $section-subheading-font-size-small;
+    }
 }
 
 .popup-subtitle { 

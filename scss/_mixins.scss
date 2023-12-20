@@ -5,6 +5,12 @@
     }
 }
 
+@mixin small-mobile {
+    @media (max-width: $small-mobile-max-width) {
+        @content
+    }
+}
+
 @mixin flexFlow($direction) { 
     display: flex;
     flex-direction: $direction;

@@ -1,5 +1,7 @@
 @import '../../scss/variables';
 @import '../../scss/functions';
+@import '../../scss/mixins';
+
 .section-container { 
     background-color: $primary-dark;
     color: $primary-light;

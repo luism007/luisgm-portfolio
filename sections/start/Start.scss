@@ -40,4 +40,10 @@
     top: 55vh;
     background: none;
     object-fit: none;
+
+
+    @include small-mobile {
+        width: 100vw;
+        transform: translateZ(2px) scale(0.8);
+    }
 }
