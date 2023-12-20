@@ -1,10 +1,14 @@
 @import '../../scss/variables';
-
+@import '../../scss/mixins';
 .list-container {
     padding: 1em;
  }
 .list-item {
     font-size: $heading-font-size;
     padding: 0.4em;
+
+    @include small-mobile { 
+        font-size: 1.2em;
+    }
 }
 
