@@ -29,6 +29,10 @@ span[class^=horizontal-list-] {
     margin: 0 1em;
 }
 
+.horizontal-scroll-arrow:hover{
+    cursor: pointer;
+}
+
 .horizontal-scroll-arrow.left { 
     left: 0
 }

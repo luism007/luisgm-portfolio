@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import './ParallaxWrapper.scss';
-
+import { useScrollTo } from '../../../hooks/useScrollTo';
 export const ParallaxWrapper = ({children}) => {
+    const {scrollToTopOfPage} = useScrollTo();
     useEffect(() => {
-        window.scrollTo(0, 0);
+        scrollToTopOfPage();
     })
     return (
         <div className = "parallax-wrapper">
