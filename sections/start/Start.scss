@@ -51,6 +51,11 @@
     top: 55vh;
     background: none;
     object-fit: none;
+    @font-face {
+        font-famly: 'Owners-Bold', 'Owners';
+        src:
+            url('https://use.typekit.net/oro0muj.css') format('svg');
+    }
 
     @include small-mobile {
         width: 100vw;
