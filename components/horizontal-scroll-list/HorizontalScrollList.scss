@@ -4,14 +4,14 @@
     display: flex;
     height: 90%;
     position: relative;
+    overflow: hidden;
 }
 
 .container-horizontal-scroll-stepper-items { 
-    display: flex;
+    display: inline-flex;
     flex-flow: row;
-    overflow-y: hidden;
-    overflow-x: auto;
     align-items: center;
+    transition: transform 1s;
 }
 
 .horizontal-scroll-arrow{
@@ -35,4 +35,7 @@
 }
 .horizontal-scroll-arrow.right { 
     right: 0
+}
+.horizontal-list-item {
+    display: inline-block;
 }

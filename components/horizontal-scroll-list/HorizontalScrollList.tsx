@@ -6,8 +6,10 @@ export const HorizontalScrollList: React.FC<{items: React.JSX.Element[]}> = (pro
     const [index, setIndex] = useState(0);
 
     const scrollTo = () => {
-        const item = document.getElementById(`horizontal-list-${index}`);
-        item?.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'start'});
+        const scrollContainer = document.getElementById('scroll-container');
+        // Since 3 items currently exist inside the experience array, moving about 1/3 to the 'next' or 'prev' ... 
+        // element should showcase them in the viewport. 
+        scrollContainer?.setAttribute('style', `transform: translateX(-${ index * 33 }%)`);
     }
 
     const clickLeft = () => {setIndex(index - 1);};
@@ -20,11 +22,11 @@ export const HorizontalScrollList: React.FC<{items: React.JSX.Element[]}> = (pro
     return(
         <div className = 'container-horizontal-scroll-stepper'>
             {index > 0 && <img src = {leftIcon} onClick={clickLeft} className="horizontal-scroll-arrow left"></img>}
-            <div className='container-horizontal-scroll-stepper-items'>
+            <div className='container-horizontal-scroll-stepper-items' id = "scroll-container">
                 {
                     props.items.map((item, index) => {
                         return (
-                            <span key={index} id = {`horizontal-list-${index}`} className = {`horizontal-list-${index}`}>
+                            <span key={index} id = {`horizontal-list-${index}`} className = {'horizontal-list-item'}>
                                 {item}
                             </span>
                         )

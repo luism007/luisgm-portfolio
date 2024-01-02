@@ -18,11 +18,19 @@
     align-items: center;
 }
 
-.section-container.projects img {
-    height: 85px;
-}
 
 .section-container.projects .section-header { 
     margin-left: 0;
     margin-bottom: 1em;
+}
+
+.section-container.projects .githubLogo { 
+    margin-top: 2em;
+}
+
+.section-container.projects div:nth-child(4) { 
+    transform: scale(0.6);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

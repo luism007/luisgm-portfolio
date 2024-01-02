@@ -8,7 +8,7 @@ import DownArrowDark from '../../assets/down-arrow-dark.svg';
 import { ETheme } from "../../constants/enums/ETheme";
 export const Projects = () => {
     const { navigateTo } = useWindowNavigate();
-    const {scrollTo} = useScrollTo('start', 'smooth', 'start', 'start');
+    const {scrollTo} = useScrollTo('aboutme', 'smooth', 'start', 'start');
     const nav = (url: string) =>{
         navigateTo(url, true);
     }
@@ -20,10 +20,10 @@ export const Projects = () => {
                     My journey in web-development started one night in my college dorm
                     when I discovered jQuery & Codeacademy. Since then I've been constantly learning through
                     work or out of my own curiosity. I've opened a new Github to showcase
-                    my learning jourey. With over 100+ contributions, I'm still on that
+                    my learning journey. With over 100+ contributions, I'm still on that
                     journey & I don't plan to stop any time soon.
                 </p>
-                <img src = {GithubLogo} onClick={() => nav('https://github.com/luism007')}></img>
+                <img src = {GithubLogo} onClick={() => nav('https://github.com/luism007')} className="githubLogo"></img>
                 <JumpSectionButton callback={scrollTo} title = "About Me" icon= {DownArrowDark} theme = {ETheme.DARK}></JumpSectionButton>
             </div>
         </div>
