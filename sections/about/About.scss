@@ -1,0 +1,49 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+.section-container.aboutme {
+    transform-style: preserve-3d;
+    text-align: center;
+}
+
+.section-container.aboutme div { 
+    transform: translateZ(5px) scale(1);
+    padding: 0 2em 2em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section-container.aboutme .section-header { 
+    margin-left: 0;
+    margin-bottom: 1em;
+}
+
+.button-container { 
+    all: unset;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    height: 100px;
+}
+.anchor-button { 
+    padding: 0.5em 1em;
+    color: $primary-light;
+    text-transform: capitalize;
+    background-color: $primary-dark;
+    border: 1px solid $primary-light;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+        font-size: 1.15em;
+        
+            @include mobile {
+                font-size: 1em;
+            }
+}
+
+.anchor-button:hover { 
+    cursor: pointer;
+}

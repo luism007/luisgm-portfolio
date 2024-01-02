@@ -1,0 +1,28 @@
+@import '../../scss/variables';
+
+.section-container.projects { 
+    background-color: $primary-light;
+    color: $dark-text;
+    text-align: center;
+    transform-style: preserve-3d;
+    overflow: visible;
+}
+
+.section-container.projects div { 
+    transform: translateZ(2px) scale(0.8);
+    padding: 0 2em 2em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section-container.projects img {
+    height: 85px;
+}
+
+.section-container.projects .section-header { 
+    margin-left: 0;
+    margin-bottom: 1em;
+}

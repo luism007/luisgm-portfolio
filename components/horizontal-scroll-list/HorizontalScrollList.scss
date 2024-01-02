@@ -14,10 +14,6 @@
     align-items: center;
 }
 
-span[class^=horizontal-list-] { 
-    // padding: 0 1em;
-}
-
 .horizontal-scroll-arrow{
     position: absolute;
     z-index: 2;
@@ -27,6 +23,7 @@ span[class^=horizontal-list-] {
     color: $light-text;
     bottom: 2em;
     margin: 0 1em;
+    padding-bottom: 2em;
 }
 
 .horizontal-scroll-arrow:hover{

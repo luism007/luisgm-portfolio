@@ -39,6 +39,11 @@ h1 {
 }
 h2 { 
     font-size: 1.875em;
+
+    @include desktop { 
+        font-size: 1.75em;
+    }
+
     @include mobile { 
         font-size: $subheading-font-size;
     }
@@ -59,6 +64,9 @@ h3 {
 p { 
     font-size: 1.85em;
     letter-spacing: 0.09em;
+    @include desktop { 
+        font-size: 1.5em;
+    }
     @include mobile { 
         font-size: $subheading-font-size;
         letter-spacing: 0;
@@ -74,4 +82,19 @@ button {
     @include mobile { 
         font-size: 1em;
     }
+}
+
+.anchor-button { 
+    padding: 0.5em 1em;
+    color: $primary-light;
+    text-transform: capitalize;
+    background-color: $primary-dark;
+    border: 1px solid $primary-light;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.anchor-button:hover { 
+    cursor: pointer;
 }
