@@ -34,7 +34,7 @@ export const AboutMe = () => {
                 <HorizontalScrollList items={pics} offset={offset}/>
                 <p>
                     When I'm not developing, I'm usually playing tourist w/ friends or
-                    enjoying one of too many hobbies: photographing. guitar, soccer, camping,
+                    enjoying one of too many hobbies: photographing, guitar, soccer, camping,
                     snowboarding, etc. One of my biggest goals for 2024 is to learn how to surf so I can
                     catch the waves this summer, so stay tuned! 
                 </p>

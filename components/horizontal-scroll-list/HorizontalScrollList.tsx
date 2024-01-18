@@ -18,6 +18,7 @@ export const HorizontalScrollList: React.FC<{items: React.JSX.Element[], offset?
     const clickRight = () => {setIndex(index + 1);}
     
     useEffect(() => {
+        console.log('New offset', props.offset);
         setNumItems(props.items.length);
         scrollTo();
     }, [index]);
