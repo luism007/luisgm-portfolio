@@ -1,0 +1,19 @@
+@import '../../../scss/mixins';
+.imgcard-container { 
+    height: 400px;
+    width: 400px;
+    padding: 1em;
+    background-color: rgba($color: #000, $alpha: .8);
+}
+.imgcard-container img { 
+    height: 100%;
+    width: 100%;
+
+
+    @include mobile { 
+        object-fit: contain !important;
+    }
+}
+
+
+

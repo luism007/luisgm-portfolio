@@ -3,19 +3,16 @@
 .container-horizontal-scroll-stepper { 
     display: flex;
     height: 90%;
+    width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .container-horizontal-scroll-stepper-items { 
-    display: flex;
+    display: inline-flex;
     flex-flow: row;
-    overflow-y: hidden;
-    overflow-x: auto;
     align-items: center;
-}
-
-span[class^=horizontal-list-] { 
-    // padding: 0 1em;
+    transition: transform 1s;
 }
 
 .horizontal-scroll-arrow{
@@ -27,6 +24,7 @@ span[class^=horizontal-list-] {
     color: $light-text;
     bottom: 2em;
     margin: 0 1em;
+    padding-bottom: 2em;
 }
 
 .horizontal-scroll-arrow:hover{
@@ -38,4 +36,7 @@ span[class^=horizontal-list-] {
 }
 .horizontal-scroll-arrow.right { 
     right: 0
+}
+.horizontal-list-item {
+    display: inline-block;
 }

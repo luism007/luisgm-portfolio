@@ -6,6 +6,8 @@ import { Experience } from "./sections/experience/Experience";
 import { ParallaxWrapper } from "./components/styled-components/parallax-wrapper/ParallaxWrapper";
 import './scss/_foundation.scss';
 import { Start } from "./sections/start/Start";
+import { Projects } from "./sections/projects/Projects";
+import { AboutMe } from "./sections/about/About";
 const App = () => {
 
 
@@ -15,6 +17,8 @@ const App = () => {
                 <Start></Start>
                 <Welcome></Welcome>
                 <Experience></Experience>
+                <Projects></Projects>
+                <AboutMe></AboutMe>
             </ParallaxWrapper>
         </div>
     )
