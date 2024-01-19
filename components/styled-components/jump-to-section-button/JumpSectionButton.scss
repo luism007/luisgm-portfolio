@@ -1,4 +1,5 @@
 @import '../../../scss/variables';
+@import '../../../scss/mixins';
 
 .jump-to-section-button-container,
 .jump-to-section-button-container h3,
@@ -11,6 +12,11 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
+    border: 1px solid #000;
+    width: 70%;
+    @include mobile { 
+        margin: 2em auto 0.5em;
+    }
 }
 
 .jump-to-section-button-container img { 
@@ -19,7 +25,12 @@
 
 .jump-to-section-button-container h3 { 
     font-size: 3em;
-    margin-bottom: 0.5em;
+    text-align: center;
+    padding: 0.5em;
+
+    @include mobile { 
+        font-size: 1.5em;
+    }
 }
 
 .jump-to-section-button-container:hover { 

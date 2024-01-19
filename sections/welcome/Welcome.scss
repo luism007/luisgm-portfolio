@@ -13,11 +13,21 @@
     overflow: visible;
     justify-content: center;
     align-items: center;
+    height: 65vh;
+    transform: translateZ(1px) scale(0.8);
+
+    @include mobile { 
+        height: 55%;
+    }
+
+    @include small-mobile { 
+        height: 65%;
+    }
 }
 
-.section-container.welcome div { 
-    transform: translateZ(4px) scale(0.6);
-    padding: 2em;
+.section-container.welcome div:nth-child(1) { 
+    padding: 1em;
+    height: 100%;
 }
 
 .section-container.welcome .section-header { 

@@ -11,19 +11,24 @@
     transform-style: preserve-3d;
     overflow: visible;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+
+    @include mobile { 
+      flex-flow: column;
+    }
 }
 
-.section-container.start::before { 
+
+.parallax-background::before { 
     content: "";
     position: absolute;
     background-color: rgba(0, 0, 0, 0.4);
     inset: 0;
 }
 
-.section-container.start div { 
-    transform: translateZ(1px) scale(0.5);
-    padding: 2em;
+.section-container.start div:nth-of-type(2){
+    position: absolute;
+    bottom: 0;
 }
 
 .parallax-background,
@@ -36,29 +41,47 @@
     width: 100%;
     object-fit: contain;
 }
-.parallax-background { 
-    transform: translateZ(0px) scale(1);
-    background-color: black;
 
+.start-headshot {
+    display: block;
     @include mobile { 
-        object-fit: cover;
+        width: 80%;
+        height: auto;
+        margin: auto;
+    }
+
+    @include small-mobile { 
+        height: 40%;
+    }
+} 
+.parallax-background { 
+    background: black;
+    transform: translateZ(0px) scale(1);
+    height: 70vh;
+    width: 70vh;
+    @include mobile { 
+      height: 100%;
+      width: 100%;
     }
 }
 .parallax-foreground { 
-    transform: translateZ(2px) scale(1);
-    width: 70vw;
+    width: auto;
     height: 20vh;
-    top: 55vh;
     background: none;
     object-fit: none;
     @font-face {
-        font-famly: 'Owners-Bold', 'Owners';
-        src:
-            url('https://use.typekit.net/oro0muj.css') format('svg');
+            font-famly: 'Owners-Bold', 'Owners';
+            src:
+                url('https://use.typekit.net/oro0muj.css') format('svg');
     }
 
+    @include mobile { 
+        width: auto;
+        bottom: 45%;
+    }
     @include small-mobile {
         width: 100vw;
-        transform: translateZ(2px) scale(0.8);
+        bottom: 65%;
     }
 }
+

@@ -5,7 +5,6 @@ export const JumpSectionButton: React.FC<{callback: () => void, title: string, i
     return(
         <div onClick={props.callback} className="jump-to-section-button-container">
             <h3 className= {props.theme}> {props.title} </h3>
-            <img src={props.icon}></img>
         </div>
     )
 }

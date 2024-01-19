@@ -4,10 +4,13 @@ import { HorizontalScrollList } from "../../components/horizontal-scroll-list/Ho
 import { pictures } from "../../constants/pictures";
 import { ImgCard } from "../../components/styled-components/img-card/ImgCard";
 import { useWindowSize } from "../../hooks/useWindowSize";
+import { createPortal } from "react-dom";
+import { Popup } from "../../components/popup/Popup";
 export const AboutMe = () => {
     const pics = pictures.map((pic) => <ImgCard img = {pic}></ImgCard>)
     const {getWindowWidth} = useWindowSize();
     const [offset, setOffset] = useState<number | null>(null);
+    const [popup, setPopup] = useState('hide');
 
     const updatingOffset = () => {
         const windowSize = getWindowWidth();
@@ -25,8 +28,11 @@ export const AboutMe = () => {
             window.removeEventListener('resize', updatingOffset); 
         }
         
-    }, [offset])
+    }, [offset, popup])
 
+    const togglePopup = () => {
+        setPopup((popup === 'show') ? 'hide' : 'show');
+    }
     return (
         <div className="section-container aboutme" id = "aboutme">
             <div className="aboutme-inner-container">
@@ -39,9 +45,18 @@ export const AboutMe = () => {
                     catch the waves this summer, so stay tuned! 
                 </p>
                 <div className = "button-container">
-                    <a className="anchor-button" href = "mailto:luisgm.w001@gmail.com" target="_top">
-                         contact me
-                    </a>
+                    <button onClick={togglePopup}> Reach Out</button>
+                    {
+                        createPortal(
+                            <Popup animateClass={popup} title = {"Socials: "} subtitle = "lets connect" callback={togglePopup}>
+                                <div>
+                                    <a className="anchor-button" href="mailto:luisgm.w001@gmail.com" target="_top">
+                                        contact me
+                                    </a>
+                                </div>
+                            </Popup>, document.body
+                        )
+                    }
                 </div>
             </div>
         </div>
