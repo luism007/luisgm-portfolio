@@ -10,10 +10,17 @@
     text-align: center;
     transform-style: preserve-3d;
     overflow: visible;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
 
+    @include desktop { 
+        display: grid;
+        grid-template-columns: 40% 60% 0%;
+        grid-template-rows: 100%;
+    }
     @include mobile { 
+      display: flex;
+      justify-content: center;
       flex-flow: column;
     }
 }
@@ -29,6 +36,14 @@
 .section-container.start div:nth-of-type(2){
     position: absolute;
     bottom: 0;
+
+    @include desktop { 
+        position: relative;
+    }
+
+    @include mobile {
+        position: absolute;
+    }
 }
 
 .parallax-background,
@@ -44,6 +59,12 @@
 
 .start-headshot {
     display: block;
+
+    @include desktop { 
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
     @include mobile { 
         width: 80%;
         height: auto;
@@ -59,7 +80,14 @@
     transform: translateZ(0px) scale(1);
     height: 70vh;
     width: 70vh;
+    @include desktop { 
+        position: relative;
+        height: 70%;
+        width: 70%;
+        margin: 0 auto;
+    }
     @include mobile { 
+      position: absolute;
       height: 100%;
       width: 100%;
     }
