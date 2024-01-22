@@ -26,6 +26,9 @@
 }
 
 .section-container.welcome div:nth-child(1) { 
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
     padding: 1em;
     height: 100%;
 }
@@ -33,4 +36,12 @@
 .section-container.welcome .section-header { 
     margin-left: 0;
     margin-bottom: 1em;
+
+    @include small-mobile { 
+        margin-bottom: 0.2em;
+    }
+}
+
+p  {
+    margin-bottom: 2em;
 }

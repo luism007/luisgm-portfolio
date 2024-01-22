@@ -29,20 +29,27 @@
 .parallax-background::before { 
     content: "";
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
     inset: 0;
 }
 
 .section-container.start div:nth-of-type(2){
     position: absolute;
     bottom: 0;
-
     @include desktop { 
-        position: relative;
+        position: absolute;
+        left: 40vw;
+        height: 95%;
     }
 
     @include mobile {
         position: absolute;
+        left: 0;
+        height: 55%;
+    }
+
+    @include small-mobile { 
+        height: 65%;
     }
 }
 
@@ -61,13 +68,13 @@
     display: block;
 
     @include desktop { 
-        height: 100%;
+        height: 85%;
         width: 100%;
         margin: 0 auto;
     }
     @include mobile { 
         width: 80%;
-        height: auto;
+        height: 80%;
         margin: auto;
     }
 
@@ -77,23 +84,26 @@
 } 
 .parallax-background { 
     background: black;
-    transform: translateZ(0px) scale(1);
+    transform: translateZ(1px) scale(1);
     height: 70vh;
     width: 70vh;
     @include desktop { 
-        position: relative;
+        // position: relative;
+        position: absolute;
         height: 70%;
-        width: 70%;
+        width: 30%;
+        left: 10vw;
         margin: 0 auto;
     }
     @include mobile { 
       position: absolute;
+      left: 0;
       height: 100%;
       width: 100%;
     }
 }
 .parallax-foreground { 
-    width: auto;
+    width: 100%;
     height: 20vh;
     background: none;
     object-fit: none;
@@ -103,13 +113,20 @@
                 url('https://use.typekit.net/oro0muj.css') format('svg');
     }
 
+    @include desktop { 
+        background: black;
+        bottom: 0;
+        height: 30%;
+        z-index: 0;
+    }
+
     @include mobile { 
-        width: auto;
-        bottom: 45%;
+        height: 100%;
+        bottom: 20%;
+        background: rgba(0,0,0,0.2);
     }
     @include small-mobile {
-        width: 100vw;
-        bottom: 65%;
+        // bottom: 65%;
     }
 }
 

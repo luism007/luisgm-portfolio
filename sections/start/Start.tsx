@@ -13,8 +13,8 @@ export const Start = () => {
         <div className="section-container start" id = "start">
             <div className="parallax-background">
                 <img src={LuisHeadshot} className="start-headshot"></img>
+                <img src={LuisTitle} className="parallax-foreground" />
             </div>
-            <img src={LuisTitle} className="parallax-foreground" />
             <Welcome></Welcome>
             {/* <JumpSectionButton callback={scrollTo} title="Enter" icon= {DownArrowDark} theme= {ETheme.DARK}></JumpSectionButton> */}
         </div>
