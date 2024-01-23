@@ -13,7 +13,7 @@ export const projects: ProjectType[] = [
         id: 1,
         title: 'Arizona COVID-19 Vaccine Finder',
         media: null,
-        description: "The pandemic, was for the lack of better words, a time of uncertainty. Personally, one of the things I was extremely uncertain about was how I could help. After some back and forth with some users on Reddit we agreed to make a website dedicated to help Arizona residents find available time-slots for the novel COVID-19 vaccine. My job was to build the UI and all corresponding functionality to help users find available time-slots as quickly as they could. Unfortunately many pharmacies blocked any external users from their APIs to get the information we needed to complete the project. Despite having fake data, I still wanted to showcase the work that was done and the vision that we had to help.",
+        description: "The pandemic, was for the lack of better words, a time of uncertainty. Personally, one of the things I was extremely uncertain about was how I could help. After some back and forth with some users on Reddit we agreed to make a website dedicated to help Arizona residents find available time-slots for the novel COVID-19 vaccine. My job was to build the UI and all corresponding functionality to help users find available time-slots as quickly as they could. Unfortunately many pharmacies blocked any external users from their APIs to get the information we needed to complete the project. Despite not having real data, I still wanted to showcase the work that was done and the vision that we had to help.",
         listItems: ["Angular", "Typescript", "Express"],
         externalLink: "https://github.com/luism007/Arizona-Covid-19-Vaccine-Finder"
     }

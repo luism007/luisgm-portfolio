@@ -32,7 +32,7 @@
 .popup-title,
 .popup-subtitle {
     @include mobile { 
-        font-size: $heading-font-size;
+        font-size: 1.2em;
     }
 
     @include small-mobile { 

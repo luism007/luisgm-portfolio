@@ -10,6 +10,11 @@
     align-items: center;
     @include mobile { 
         width: 35%;
+        margin: 0 auto;
+    }
+
+    @include small-mobile { 
+        width: 55%;
     }
 }
 .button-title { 

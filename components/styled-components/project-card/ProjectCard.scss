@@ -5,8 +5,21 @@
     padding: 10% 3em 0em;
 
     @include mobile { 
-      width: 100vw;
-      padding: 1em -0.5em;
+    
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100vw;
+        padding: 1em -0.5em;
+        height: 85vh;
+        overflow-y: scroll;
+    }
+
+    @include small-mobile { 
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
     }
 }
 
@@ -26,7 +39,8 @@
 
 .project-container-card p { 
     margin: 1em auto;
-    font-size: 1em;
+    font-size: 1.5em;
+
     @include mobile { 
         font-size: 1.25em;
     }
@@ -42,6 +56,11 @@
         flex-flow: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
+    }
+
+    @include small-mobile{
+        padding-bottom: 1vh;
     }
 }
 
@@ -64,9 +83,24 @@
 
 .project-info-container div { 
     grid-column: 3 / 4;
+
+    @include desktop  {
+        height: 5vh;
+    }
+    @include mobile { 
+        height: 5vh;
+    }
+}
+
+.project-info-container div p{ 
+    font-size: 1em;
+    @include mobile { 
+        font-size: 1em;
+    }
 }
 
 .project-info-container li { 
     list-style: none;
-    font-size: 1em;
+    font-size: 1.2em;
+    padding-left: 0;
 }
