@@ -38,6 +38,9 @@ export const Projects = () => {
         //         <JumpSectionButton callback={scrollTo} title = "About Me" icon= {DownArrowDark} theme = {ETheme.DARK}></JumpSectionButton>
         //     </div>
         // </div>
-        <HorizontalScrollList items={horizontalListItems}></HorizontalScrollList>
+        <div className="section-container projects" id = "projects">
+            <HorizontalScrollList items={horizontalListItems} theme={ETheme.DARK}></HorizontalScrollList>
+            <JumpSectionButton callback={scrollTo} title="About Me" icon={DownArrowDark} theme={ETheme.DARK}></JumpSectionButton>
+        </div>
     )
 }

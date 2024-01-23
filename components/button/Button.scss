@@ -1,0 +1,34 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.button-container { 
+    height: 8vh;
+    width: auto;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    @include mobile { 
+        width: 35%;
+    }
+}
+.button-title { 
+    text-align: center;
+    margin: 0.5em auto;
+}
+.button-container.light{ 
+    border: 1px solid black;
+    background: white;
+}
+.button-title.light { 
+    color: black;
+}
+
+.button-container.dark {
+    border: 1px solid white;
+    background: $primary-dark;
+}
+
+.button-title.dark { 
+    color: white;
+}

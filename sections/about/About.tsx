@@ -6,6 +6,8 @@ import { ImgCard } from "../../components/styled-components/img-card/ImgCard";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { createPortal } from "react-dom";
 import { Popup } from "../../components/popup/Popup";
+import { Button } from "../../components/button/Button";
+import { ETheme } from "../../constants/enums/ETheme";
 export const AboutMe = () => {
     const pics = pictures.map((pic) => <ImgCard img = {pic}></ImgCard>)
     const {getWindowWidth} = useWindowSize();
@@ -45,7 +47,7 @@ export const AboutMe = () => {
                     catch the waves this summer, so stay tuned! 
                 </p>
                 <div className = "button-container">
-                    <button onClick={togglePopup}> Reach Out</button>
+                    <Button title="Reach Out" callback={togglePopup} theme={ETheme.DARK}></Button>
                     {
                         createPortal(
                             <Popup animateClass={popup} title = {"Socials: "} subtitle = "lets connect" callback={togglePopup}>

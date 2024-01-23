@@ -20,13 +20,6 @@
     margin-bottom: 1em;
 }
 
-.button-container { 
-    all: unset;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    height: 100px;
-}
 .anchor-button { 
     padding: 0.5em 1em;
     color: $primary-light;
