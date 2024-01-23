@@ -2,7 +2,19 @@
 @import '../../scss/functions';
 @import '../../scss/mixins';
 
-.section-container { 
+.section-container.experience { 
     background-color: $primary-dark;
     color: $primary-light;
+    padding-top: 5vh;
+    display: flex;
+    flex-flow: column;
+}
+
+.section-container.experience div:nth-of-type(1) { 
+    height: 70%;
+}
+.section-container.experience div.jump-to-section-button-container { 
+    display: flex;
+    flex-flow: column;
+    align-self: center;
 }
