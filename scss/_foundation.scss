@@ -99,3 +99,9 @@ button {
 .anchor-button:hover { 
     cursor: pointer;
 }
+
+@media (prefers-reduced-motion) { 
+    .hidden, .show {
+        transition: none;
+    }
+}

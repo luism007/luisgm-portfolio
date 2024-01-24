@@ -7,7 +7,7 @@ import { ETheme } from "../../constants/enums/ETheme";
 export const Welcome = () => {
     const {scrollTo} = useScrollTo('experience', 'smooth', 'start', 'start');
     return(
-        <div className="section-container welcome" id = "welcome">
+        <div className="section-container welcome hidden" id = "welcome">
             <div> 
                 <h1 className="section-header">
                     Welcome

@@ -38,7 +38,7 @@
     bottom: 0;
     @include desktop { 
         position: absolute;
-        left: 40vw;
+        left: 45vw;
         height: 95%;
     }
 
@@ -49,7 +49,7 @@
     }
 
     @include small-mobile { 
-        height: 65%;
+        height: 60%;
     }
 }
 
@@ -127,6 +127,31 @@
     }
     @include small-mobile {
         // bottom: 65%;
+    }
+}
+
+.section-container.start.hidden,
+.section-container.welcome.hidden { 
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(-100%);
+    transition: all 1s;
+
+    @include mobile { 
+        transform: translateX(0);
+        transition: all 0.5s;
+    }
+}
+
+.section-container.start.show,
+.section-container.welcome.show { 
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+    transition: all 1s;
+    @include mobile { 
+        transform: translateX(0);
+        transition: all 0.5s;
     }
 }
 
