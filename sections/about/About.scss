@@ -4,6 +4,7 @@
     transform-style: preserve-3d;
     text-align: center;
     background-color: #000;
+    color: $primary-light;
 }
 
 .aboutme-inner-container { 
@@ -13,6 +14,10 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+.aboutme-synopsis {
+    margin: 1em 0 2em 0;
 }
 
 .section-container.aboutme .section-header { 
@@ -47,4 +52,9 @@
     @include mobile { 
         width: 100vw;
     }
+}
+
+.button-container { 
+    width: 35%;
+    background: black;
 }
