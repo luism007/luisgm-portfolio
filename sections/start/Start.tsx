@@ -7,7 +7,7 @@ import { useToggleAnimation } from "../../hooks/useToggleAnimation";
 
 
 export const Start = () => {
-    const { intersectionObserver } = useToggleAnimation('show');
+    const { intersectionObserver } = useToggleAnimation('show', false);
 
     useEffect(() => {
 

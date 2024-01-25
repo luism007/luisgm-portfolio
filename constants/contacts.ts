@@ -7,7 +7,7 @@ export const contacts = [
     }, {
         title: 'Email Me',
         externalLink: 'mailto:luisgm.w001@gmail.com',
-        iconUrl: 'https://res.cloudinary.com/inlimbo-studios/image/upload/v1705617892/icons/email-icon_peyyoc.png',
+        iconUrl: 'https://res.cloudinary.com/inlimbo-studios/image/upload/v1706160557/icons/email-icon_q8gkke.png',
         target: '_top'
     },
     {

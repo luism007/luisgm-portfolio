@@ -8,11 +8,17 @@ import { createPortal } from "react-dom";
 import { Popup } from "../../components/popup/Popup";
 import { Button } from "../../components/button/Button";
 import { ETheme } from "../../constants/enums/ETheme";
+import { useToggleAnimation } from "../../hooks/useToggleAnimation";
+import { contacts } from "../../constants/contacts";
+import { ContactCard } from "../../components/styled-components/contact-card/ContactCard";
+import { List } from "../../components/list/List";
 export const AboutMe = () => {
     const pics = pictures.map((pic) => <ImgCard img = {pic}></ImgCard>)
+    const socialLinks = contacts.map((contact) => <ContactCard {...contact}></ContactCard>)
     const {getWindowWidth} = useWindowSize();
     const [offset, setOffset] = useState<number | null>(null);
     const [popup, setPopup] = useState('hide');
+    const {intersectionObserver} = useToggleAnimation('show', false);
 
     const updatingOffset = () => {
         const windowSize = getWindowWidth();
@@ -22,12 +28,12 @@ export const AboutMe = () => {
             setOffset(null);
         }
     }
-    window.addEventListener('resize', updatingOffset);
 
     useEffect(() => {
-        updatingOffset();
+        const sections = document.querySelectorAll(".aboutme-inner-container");
+        sections.forEach(section => intersectionObserver.observe(section));
         return () => { 
-            window.removeEventListener('resize', updatingOffset); 
+            sections.forEach(section => intersectionObserver.unobserve(section));
         }
         
     }, [offset, popup])
@@ -37,7 +43,7 @@ export const AboutMe = () => {
     }
     return (
         <div className="section-container aboutme" id = "aboutme">
-            <div className="aboutme-inner-container">
+            <div className="aboutme-inner-container hidden">
                 <h1 className="section-header"> About Me </h1>
                 {/* <HorizontalScrollList items={pics} offset={offset}/> */}
                 <p className="aboutme-synopsis">
@@ -46,18 +52,12 @@ export const AboutMe = () => {
                     snowboarding, etc. One of my biggest goals for 2024 is to learn how to surf so I can
                     catch the waves this summer, so stay tuned! 
                 </p>
-                <Button title="Reach Out" callback={togglePopup} theme={ETheme.BLACK}></Button>
-                {
-                    createPortal(
-                        <Popup animateClass={popup} title={"Socials: "} subtitle="lets connect" callback={togglePopup}>
-                            <div>
-                                <a className="anchor-button" href="mailto:luisgm.w001@gmail.com" target="_top">
-                                    contact me
-                                </a>
-                            </div>
-                        </Popup>, document.body
-                    )
-                }
+                <Button title="Let's Connect" callback={togglePopup} theme={ETheme.BLACK}></Button>
+
+                <Popup animateClass={popup} title={"Socials: "} subtitle="lets connect" callback={togglePopup}>
+                    <List items={socialLinks} listDecoration={'none'} />
+                </Popup>
+
             </div>
         </div>
     )

@@ -9,7 +9,7 @@ import './Experience.scss';
 import { useToggleAnimation } from "../../hooks/useToggleAnimation";
 export const Experience = () => {
     const {scrollTo} = useScrollTo('projects', 'smooth', 'start', 'start');
-    const {intersectionObserver} = useToggleAnimation('show')
+    const {intersectionObserver} = useToggleAnimation('show', false)
     const expCards = experience.map((exp) => <ExperienceCard experience={exp}/>);
     useEffect(() => {
         
