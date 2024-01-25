@@ -130,8 +130,7 @@
     }
 }
 
-.section-container.start.hidden,
-.section-container.welcome.hidden { 
+.section-container.start.hidden { 
     opacity: 0;
     filter: blur(2px);
     transform: translateX(-100%);
@@ -143,8 +142,7 @@
     }
 }
 
-.section-container.start.show,
-.section-container.welcome.show { 
+.section-container.start.show{ 
     opacity: 1;
     filter: blur(0px);
     transform: translateX(0);
@@ -154,4 +152,7 @@
         transition: all 0.5s;
     }
 }
+.section-container.welcome.show,
+.section-container.welcome.hidden {
 
+}
