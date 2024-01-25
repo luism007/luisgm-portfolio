@@ -1,0 +1,106 @@
+@import '../../../scss/mixins';
+.project-container-card { 
+    
+    width: 75vw;
+    padding: 10% 3em 0em;
+
+    @include mobile { 
+    
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100vw;
+        padding: 1em -0.5em;
+        height: 85vh;
+        overflow-y: scroll;
+    }
+
+    @include small-mobile { 
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+    }
+}
+
+.project-media-container { 
+    height: 200px;
+    width: 80%;
+    display: block;
+    margin: 0.2em auto 0.2em 0;
+    background: black;
+
+    @include mobile { 
+        margin: 0.2em auto;
+        height: 350px;
+        width: 100%;
+    }
+}
+
+.project-container-card p { 
+    margin: 1em auto;
+    font-size: 1.5em;
+
+    @include mobile { 
+        font-size: 1.25em;
+    }
+    @include small-mobile {
+        font-size: 1em;
+    }
+}
+
+.view-info-container { 
+    display: none;
+    @include mobile { 
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    @include small-mobile{
+        padding-bottom: 1vh;
+    }
+}
+
+.project-info-container {
+    display: grid;
+    grid-template-columns: 10% 30% 30%;
+    grid-template-rows: 10% 90%;
+    @include mobile { 
+        display: none;
+    }
+}
+
+.project-info-container h3 { 
+    grid-column: 1 / 3;
+}
+
+.project-info-container ul  {
+    grid-column: 1 / 2;
+}
+
+.project-info-container div { 
+    grid-column: 3 / 4;
+
+    @include desktop  {
+        height: 5vh;
+    }
+    @include mobile { 
+        height: 5vh;
+    }
+}
+
+.project-info-container div p{ 
+    font-size: 1em;
+    @include mobile { 
+        font-size: 1em;
+    }
+}
+
+.project-info-container li { 
+    list-style: none;
+    font-size: 1.2em;
+    padding-left: 0;
+}

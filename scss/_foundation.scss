@@ -6,6 +6,7 @@
     padding: 0;
     font-family: $font-family;
     font-size: $default-font-size;
+    text-align: left;
 }
 .section-container { 
     height: 100vh;
@@ -97,4 +98,10 @@ button {
 
 .anchor-button:hover { 
     cursor: pointer;
+}
+
+@media (prefers-reduced-motion) { 
+    .hidden, .show {
+        transition: none;
+    }
 }

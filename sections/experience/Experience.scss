@@ -2,7 +2,40 @@
 @import '../../scss/functions';
 @import '../../scss/mixins';
 
-.section-container { 
+.section-container.experience { 
     background-color: $primary-dark;
     color: $primary-light;
+    padding-top: 5vh;
+    display: flex;
+    flex-flow: column;
+}
+
+.section-container.experience div:nth-of-type(1) { 
+    height: 70%;
+}
+.section-container.experience div.jump-to-section-button-container { 
+    display: flex;
+    flex-flow: column;
+    align-self: center;
+}
+
+
+.horizontal-list-item.hidden { 
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.horizontal-list-item.show { 
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+    transition: all 0.5s;
+}
+
+.horizontal-list-item:nth-child(1) {
+    transition-delay: 200ms;
+}
+.horizontal-list-item:nth-child(2) {
+    transition-delay: 100ms;
 }

@@ -7,6 +7,9 @@
     font-size: $heading-font-size;
     padding: 0.4em;
 
+    @include mobile { 
+        font-size: 1.3em;
+    }
     @include small-mobile { 
         font-size: 1.2em;
     }

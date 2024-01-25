@@ -3,7 +3,7 @@
 
 .popup-container { 
     position: absolute;
-    bottom: 0;
+    bottom: -100%;
     left: 0;
 }
 
@@ -32,7 +32,7 @@
 .popup-title,
 .popup-subtitle {
     @include mobile { 
-        font-size: $heading-font-size;
+        font-size: 1.2em;
     }
 
     @include small-mobile { 
@@ -70,6 +70,7 @@
     animation-name: hideBackground;
     animation-duration: 0.1s;
     animation-timing-function: ease-in;
+    transition-delay: 1s;
 }
 
 .popup-slide-section.hide {
@@ -81,6 +82,7 @@
 
 
 .popup-container.show { 
+    bottom: 0;
     height: 100vh;
     width: 100vw;
     background-color: rgba(0,0,0,0.8);

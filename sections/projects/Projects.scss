@@ -1,22 +1,35 @@
 @import '../../scss/variables';
-
+@import '../../scss/mixins';
 .section-container.projects { 
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
     background-color: $primary-light;
     color: $dark-text;
     text-align: center;
     transform-style: preserve-3d;
     overflow: visible;
+    width: 100vw;
+    height: 100%;
+    padding: 0 1em 2em;
+
+    @include mobile { 
+        padding: 0 0.5em 2em;
+    }
+
+
 }
 
-.section-container.projects div { 
-    transform: translateZ(2px) scale(0.8);
-    padding: 0 2em 2em;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
+// .section-container.projects div { 
+//     transform: translateZ(1px) scale(1);
+//     padding: 0 2em 2em;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-around;
+//     align-items: center;
+// }
 
 
 .section-container.projects .section-header { 
@@ -29,8 +42,12 @@
 }
 
 .section-container.projects div:nth-child(4) { 
-    transform: scale(0.6);
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+
+    @include mobile { 
+        justify-content: center;
+    }
 }
+

@@ -13,14 +13,35 @@
     overflow: visible;
     justify-content: center;
     align-items: center;
+    height: 65vh;
+    transform: translateZ(1px) scale(0.8);
+
+    @include mobile { 
+        height: 55%;
+    }
+
+    @include small-mobile { 
+        height: 65%;
+    }
 }
 
-.section-container.welcome div { 
-    transform: translateZ(4px) scale(0.6);
-    padding: 2em;
+.section-container.welcome div:nth-child(1) { 
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    padding: 1em;
+    height: 100%;
 }
 
 .section-container.welcome .section-header { 
     margin-left: 0;
     margin-bottom: 1em;
+
+    @include small-mobile { 
+        margin-bottom: 0.2em;
+    }
+}
+
+p  {
+    margin-bottom: 2em;
 }

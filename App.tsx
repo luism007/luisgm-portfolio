@@ -15,7 +15,6 @@ const App = () => {
         <div>
             <ParallaxWrapper>
                 <Start></Start>
-                <Welcome></Welcome>
                 <Experience></Experience>
                 <Projects></Projects>
                 <AboutMe></AboutMe>

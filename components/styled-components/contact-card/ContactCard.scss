@@ -1,0 +1,33 @@
+.container-contact-card,
+.contact-card-icon-container
+{  
+    height: 2em;
+}
+
+.container-contact-card { 
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100%;
+    justify-items: flex-start;
+    align-items: center;
+}
+.contact-card-icon-container {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.contact-card-icon { 
+    height: 100%;
+    margin: 0 auto;
+}
+
+.contact-card-anchor { 
+    text-decoration: none;
+}
+a:visited,
+a:hover,
+a:focus,
+a:active { 
+    text-decoration: none;
+}

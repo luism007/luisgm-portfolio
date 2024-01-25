@@ -1,8 +1,11 @@
 import React, { useEffect, useState, useId } from "react";
 import leftIcon from "../../assets/left-arrow.svg";
 import rightIcon from "../../assets/right-arrow.svg";
+import leftIconDark from '../../assets/left-arrow-dark.svg';
+import rightIconDark from '../../assets/right-arrow-dark.svg';
 import './HorizontalScrollList.scss';
-export const HorizontalScrollList: React.FC<{items: React.JSX.Element[], offset?: number | null}> = (props) => {
+import { ETheme } from "../../constants/enums/ETheme";
+export const HorizontalScrollList: React.FC<{items: React.JSX.Element[], offset?: number | null, theme?: string | null}> = (props) => {
     const [index, setIndex] = useState(0);
     const [numItems, setNumItems] = useState(0);
     const id = useId();
@@ -18,14 +21,13 @@ export const HorizontalScrollList: React.FC<{items: React.JSX.Element[], offset?
     const clickRight = () => {setIndex(index + 1);}
     
     useEffect(() => {
-        console.log('New offset', props.offset);
         setNumItems(props.items.length);
         scrollTo();
     }, [index]);
 
     return(
         <div className = 'container-horizontal-scroll-stepper'>
-            {index > 0 && <img src = {leftIcon} onClick={clickLeft} className="horizontal-scroll-arrow left"></img>}
+            {index > 0 && <img src = {(props.theme === ETheme.DARK) ? leftIconDark : leftIcon} onClick={clickLeft} className="horizontal-scroll-arrow left"></img>}
             <div className='container-horizontal-scroll-stepper-items' id = {`scroll-container-${id}`}>
                 {
                     props.items.map((item, index) => {
@@ -37,7 +39,7 @@ export const HorizontalScrollList: React.FC<{items: React.JSX.Element[], offset?
                     })
                 }
             </div>
-            {index < props.items.length - 1 && <img src = {rightIcon} onClick={clickRight} className="horizontal-scroll-arrow right"></img>}
+            {index < props.items.length - 1 && <img src = {(props.theme === ETheme.DARK) ? rightIconDark : rightIcon} onClick={clickRight} className="horizontal-scroll-arrow right"></img>}
         </div>
     );
 }
