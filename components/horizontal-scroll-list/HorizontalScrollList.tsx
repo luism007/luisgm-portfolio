@@ -32,9 +32,9 @@ export const HorizontalScrollList: React.FC<{items: React.JSX.Element[], offset?
                 {
                     props.items.map((item, index) => {
                         return (
-                            <span key={index} id = {`horizontal-list-${index}`} className = {'horizontal-list-item'}>
+                            <div key={index} id = {`horizontal-list-${index}`} className = {'horizontal-list-item'}>
                                 {item}
-                            </span>
+                            </div>
                         )
                     })
                 }

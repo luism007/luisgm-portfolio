@@ -1,3 +1,4 @@
+@import '../../../scss/mixins';
 .container-contact-card,
 .contact-card-icon-container
 {  
@@ -10,6 +11,12 @@
     grid-template-rows: 100%;
     justify-items: flex-start;
     align-items: center;
+
+    @include micro-mobile { 
+        grid-template-columns: 40% 70%;
+    }
+
+
 }
 .contact-card-icon-container {
     display: flex;
@@ -24,6 +31,7 @@
 
 .contact-card-anchor { 
     text-decoration: none;
+    color: white;
 }
 a:visited,
 a:hover,

@@ -17,6 +17,10 @@
         width: 55%;
     }
 }
+.button-container:hover { 
+    cursor: pointer;
+}
+
 .button-title { 
     text-align: center;
     margin: 0.5em auto;

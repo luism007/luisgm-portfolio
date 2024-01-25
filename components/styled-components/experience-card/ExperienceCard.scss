@@ -3,9 +3,9 @@
 
 
 .subheading-experience-card { 
-    display: flex;
-    flex-flow: row;
-    justify-content: start;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 100%;
 }
 .container-experience-card { 
 
@@ -13,6 +13,9 @@
     padding: 3em;
     h2 { 
         margin: 0 0 1em 0.8em;
+        @include micro-mobile { 
+            margin-bottom: 0.2em;
+        }
     }
     @include mobile{
         width: 100vw;
