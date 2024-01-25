@@ -37,7 +37,7 @@ export const ProjectCard: React.FC<{title: string, media?: string | null, descri
                 <Popup animateClass={popup} title="Tech" subtitle = "Stack"callback={togglePopup}>
                     <>
                     <List items={props.listItems}></List>
-                    {props?.externalLink ? <Button title="View Code" callback={() => nav(props.externalLink)} theme={ETheme.LIGHT}></Button> : null}
+                    {props?.externalLink ? <Button title="View Code" callback={() => nav(props.externalLink)} theme={ETheme.DARK}></Button> : null}
                     </>
                 </Popup>, document.body
             )}

@@ -100,8 +100,8 @@ button {
     cursor: pointer;
 }
 
-@media (prefers-reduced-motion) { 
-    .hidden, .show {
-        transition: none;
-    }
-}
+// @media (prefers-reduced-motion) { 
+//     .hidden, .show {
+//         transition: none;
+//     }
+// }

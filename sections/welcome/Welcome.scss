@@ -44,4 +44,7 @@
 
 p  {
     margin-bottom: 2em;
+    @include micro-mobile { 
+        margin-bottom: 0.5em;
+    }
 }

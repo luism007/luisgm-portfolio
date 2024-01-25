@@ -18,6 +18,12 @@
     }
 }
 
+@mixin micro-mobile { 
+    @media (max-width: $micro-mobile-max-width) { 
+        @content
+    }
+}
+
 @mixin flexFlow($direction) { 
     display: flex;
     flex-direction: $direction;

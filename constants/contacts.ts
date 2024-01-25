@@ -7,13 +7,13 @@ export const contacts = [
     }, {
         title: 'Email Me',
         externalLink: 'mailto:luisgm.w001@gmail.com',
-        iconUrl: 'https://res.cloudinary.com/inlimbo-studios/image/upload/v1706160557/icons/email-icon_q8gkke.png',
+        iconUrl: 'https://res.cloudinary.com/inlimbo-studios/image/upload/v1706211349/icons/email-icon-white_v7ehfm.png',
         target: '_top'
     },
     {
         title: 'Download My Resume',
         externalLink: '',
-        iconUrl: 'https://res.cloudinary.com/inlimbo-studios/image/upload/v1705619232/icons/resume-icon_r8fmbr.png',
+        iconUrl: 'https://res.cloudinary.com/inlimbo-studios/image/upload/v1706211349/icons/resume-icon-white_vtpeow.png',
         target: '_top'
     }
 ]
