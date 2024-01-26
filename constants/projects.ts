@@ -3,6 +3,14 @@ import { ProjectType } from "./types/ProjectType";
 export const projects: ProjectType[] = [
     {
         id: 0,
+        title: 'Luis • G | M Personal Site',
+        media: null,
+        description: "This site is also a personal project of mine. I wanted to showcase my knowledge in creating my own Custom Hooks utilized throughout the site, as well leveraging the power of SASS to create custom Mixins that expedited my UI development. Lastly I wanted to demonstrate my ability to create a CI/CD pipeline through Github actions to continuously update my site whenever needed.",
+        listItems: ["React", "Typescript", "SASS", "Github Actions CI/CD"],
+        externalLink: "https://github.com/luism007/luisgm-portfolio"
+    },
+    {
+        id: 1,
         title: 'Inlimbo Photography Portfolio Site',
         media: null,
         description: "I wanted to create my own custom-site to showcase my photography portfolio. I saw this as a great opportunity to flex my dev-muscles so I decided to code it all myself using React for building the UI, Express to build the backend APIs, & MongoDB to persist my photo collections. My goal was also to remain 3rd party independent as possible when building the UI, therefore more than 90% of the components utilized are completely built by me.",
