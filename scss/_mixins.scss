@@ -28,3 +28,26 @@
     display: flex;
     flex-direction: $direction;
 }
+
+@mixin translateXAndTransition($translateXValue, $transitionValue) { 
+    -webkit-transform: translateX($translateXValue);
+    -moz-transform: translateX($translateXValue);
+    -o-transform: translateX($translateXValue);
+    -webkit-transition: $transitionValue;
+    -moz-transition: $transitionValue;
+    -o-transition: $transitionValue;
+    transform: translateX($translateXValue);
+    transition: $transitionValue;
+}
+
+@mixin filterBlur($blurValue) { 
+    -webkit-filter: blur($blurValue);
+    filter: blur($blurValue);
+}
+
+@mixin transitionDelay($delayValue) { 
+    -webkit-transition-delay: $delayValue;
+    -moz-transition-delay: $delayValue;
+    -o-transition-delay: $delayValue;
+    transition-delay: $delayValue;
+}

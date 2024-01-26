@@ -133,23 +133,19 @@
 .section-container.start.hidden { 
     opacity: 0;
     filter: blur(2px);
-    transform: translateX(-100%);
-    transition: all 1s;
+    @include translateXAndTransition(-100%, all 1s);
 
     @include mobile { 
-        transform: translateX(0);
-        transition: all 0.5s;
+        @include translateXAndTransition(0, all 0.5s);
     }
 }
 
 .section-container.start.show{ 
     opacity: 1;
     filter: blur(0px);
-    transform: translateX(0);
-    transition: all 1s;
+    @include translateXAndTransition(0, all 1s);
     @include mobile { 
-        transform: translateX(0);
-        transition: all 0.5s;
+        @include translateXAndTransition(0, all 0.5s);
     }
 }
 .section-container.welcome.show,
