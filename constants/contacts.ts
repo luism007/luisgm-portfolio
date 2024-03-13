@@ -12,7 +12,7 @@ export const contacts = [
     },
     {
         title: 'View My Resume',
-        externalLink: 'https://res.cloudinary.com/inlimbo-studios/image/upload/v1706294338/luisgm-site/LuisMejiaSiteResume_dymu4b.pdf',
+        externalLink: 'https://res.cloudinary.com/inlimbo-studios/image/upload/v1710348641/luisgm-site/LuisMejiaResume_a7onyt.pdf',
         iconUrl: 'https://res.cloudinary.com/inlimbo-studios/image/upload/v1706211349/icons/resume-icon-white_vtpeow.png',
         target: '_blank'
     }
